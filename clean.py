@@ -39,3 +39,5 @@ if __name__ == '__main__':
 
     with open(outfile, "w") as openfile:
         openfile.write(text)
+
+    print("Done")

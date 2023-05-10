@@ -13,3 +13,8 @@ Apply OCR -> Clean up extracted text -> spell check text document -> create one-
 ## Required Tools
 
 - [ocrmypdf](https://ocrmypdf.readthedocs.io/en/latest/index.html)
+- [aspell](http://aspell.net/)
+```
+sudo apt-get update -y
+sudo apt-get install -y aspell
+```
