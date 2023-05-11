@@ -10,6 +10,10 @@ The main idea is to extract text with the best off-the-shelf optical character r
 
 Apply OCR -> Clean up extracted text -> spell check text document -> create one-hot vector encodings for each of the documents (using most common spelling mistakes in the dataset) -> k-means clustering on the dataset -> visualisation tools or run batch scripts on the clusters
  
+## Dataset
+
+Aquired from [http://discovery.nationalarchives.gov.uk/details/r/C12122](http://discovery.nationalarchives.gov.uk/details/r/C12122) the dataset consists of 60 wills and testament documents of scanned handwritten text. The dataset is further divided into 4 subgroubs with 15 documents each, where each subgroup contains docuemnts of a similar era.
+
 ## Required Tools
 
 - [ocrmypdf](https://ocrmypdf.readthedocs.io/en/latest/index.html)
