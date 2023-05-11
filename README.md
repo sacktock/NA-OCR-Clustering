@@ -41,10 +41,15 @@ python run.py
 
 ### Evaluation Metrics
 
+![Evaluation Metrics](https://github.com/sacktock/NA-OCR-Clustering/blob/main/clustering.png)
+
 ### Most common mistakes
 Cluster 0: fhe ane fone aud ond ard Ane Fhe fre dnd
+
 Cluster 1: aud aus tte ote oud ree Aud ieee ated ete
+
 Cluster 2: mee fre Ces aes ete ont aie ene poe fone
+
 Cluster 3: ote Ree bok Referenceprob Sher fae Sele tal ces panies
 
 ## Acks
