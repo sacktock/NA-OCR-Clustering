@@ -92,6 +92,8 @@ if __name__ == '__main__':
             for line in f:
                 line = line.strip()
                 encodings_dict[filename] += one_hot_encode(line)
+        encodings_dict[filename] = np.clip(encodings_dict[filename], a_min=None, a_max=1)
+        
     X = np.array([encodings_dict[filename] for filename in filenames])
 
     print(f"n_samples: {X.shape[0]}, n_features: {X.shape[1]}")
