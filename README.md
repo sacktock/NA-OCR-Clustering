@@ -8,8 +8,16 @@ The main idea is to extract text with the best off-the-shelf optical character r
 
 ## Proposed Pipeline
 
-Apply OCR -> Clean up extracted text -> spell check text document -> create one-hot vector encodings for each of the mistakes (using most common spelling mistakes in the dataset) -> cerate multi-hot vector for each document -> k-means clustering on the dataset -> visualisation tools or run batch scripts on the clusters
- 
+- Apply off-the-sheld OCR
+- Clean extracted text
+- Spell check the extracted text
+- [Optional] For better clustering, remove mistakes that occur in >50% of documents and <5% of documents.
+- Create one-hot vector encodings of the most common spelling mistakes.
+- Create multi-hot vector for each document (sum of one-hot vectors).
+- [Optional] Perform dimensionality reduction with LSA (or similar).
+- K-means (or similar) clustering on the multi-hot vectors.
+- Apply evaluation metrics and visualisation tools.
+
 ## Dataset
 
 Aquired from [http://discovery.nationalarchives.gov.uk/details/r/C12122](http://discovery.nationalarchives.gov.uk/details/r/C12122) the dataset consists of 60 wills and testament documents of scanned handwritten text. The dataset is further divided into 4 subgroubs with 15 documents each, where each subgroup contains docuemnts of a similar era.
@@ -22,3 +30,23 @@ Aquired from [http://discovery.nationalarchives.gov.uk/details/r/C12122](http://
 sudo apt-get update -y
 sudo apt-get install -y aspell
 ```
+
+## Running
+
+```
+python run.py
+```
+
+## Results
+
+### Evaluation Metrics
+
+### Most common mistakes
+Cluster 0: fhe ane fone aud ond ard Ane Fhe fre dnd
+Cluster 1: aud aus tte ote oud ree Aud ieee ated ete
+Cluster 2: mee fre Ces aes ete ont aie ene poe fone
+Cluster 3: ote Ree bok Referenceprob Sher fae Sele tal ces panies
+
+## Acks
+
+- [document clustering](https://scikit-learn.org/stable/auto_examples/text/plot_document_clustering.html)
