@@ -8,7 +8,7 @@ The main idea is to extract text with the best off-the-shelf optical character r
 
 ## Proposed Pipeline
 
-- Apply off-the-sheld OCR
+- Apply off-the-shelf OCR
 - Clean extracted text
 - Spell check the extracted text
 - [Optional] For better clustering, remove mistakes that occur in >50% of documents and <5% of documents.
